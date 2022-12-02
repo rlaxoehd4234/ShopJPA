@@ -1,0 +1,2 @@
+# ShopJPA
+Spring Boot + SpringJPA
