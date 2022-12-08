@@ -38,17 +38,17 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status;  // order status
 
-    public void setMember(Member member){
+    public void setMember(Member member){//연관관계 편의메서드
         this.member = member;
         member.getOrders().add(this);
     }
 
-    public void addOrderItem(OrderItem orderItem){
+    public void addOrderItem(OrderItem orderItem){ //연관관계 편의메서드
         orderItems.add(orderItem);
         orderItem.setOrder(this);
     }
 
-    public void setDelivery(Delivery delivery){
+    public void setDelivery(Delivery delivery){//연관관계 편의메서드
         this.delivery = delivery;
         delivery.setOrder(this);
     }
